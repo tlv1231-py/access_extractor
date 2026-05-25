@@ -102,13 +102,16 @@ class App(tk.Frame):
         name = self._profile_var.get().strip()
         if not name:
             return
-        data = load_profile(name)
-        if data:
-            self._repo_var.set(data.get("repo", ""))
-            self._token_var.set(data.get("token", ""))
-            self._append_log(f"Loaded profile: {name}")
-        else:
-            messagebox.showerror("Profile", f"Profile {name!r} not found.")
+        try:
+            data = load_profile(name)
+            if data:
+                self._repo_var.set(data.get("repo", ""))
+                self._token_var.set(data.get("token", ""))
+                self._append_log(f"Loaded profile: {name}")
+            else:
+                self._append_log(f"Profile {name!r} not found.")
+        except Exception as exc:
+            self._append_log(f"Profile load error: {exc}")
 
     def _save_profile(self) -> None:
         name = self._profile_name_var.get().strip()
@@ -166,14 +169,24 @@ class App(tk.Frame):
                 self._append_log("GitHub Repo is required when Push to GitHub is enabled.")
                 return
 
-        output_path = str(pathlib.Path(output_dir) / (pathlib.Path(mdb).stem + ".json"))
-        job = ExtractionJob(mdb_path=mdb, output_path=output_path)
+        # Clear output folder before extraction to prevent cross-run contamination
+        output_path = pathlib.Path(output_dir)
+        if output_path.exists():
+            for f in output_path.iterdir():
+                if f.is_file():
+                    try:
+                        f.unlink()
+                    except Exception as exc:
+                        self._append_log(f"Warning: could not clear {f.name}: {exc}")
+
+        output_file = str(output_path / (pathlib.Path(mdb).stem + ".json"))
+        job = ExtractionJob(mdb_path=mdb, output_path=output_file)
 
         self._run_btn.config(state="disabled")
         self._status_var.set("running")
         self._clear_log()
         self._append_log(f"Input:  {mdb}")
-        self._append_log(f"Output: {output_path}")
+        self._append_log(f"Output: {output_file}")
         self._append_log("Running…")
 
         threading.Thread(target=self._worker, args=(job,), daemon=True).start()
@@ -208,6 +221,10 @@ class App(tk.Frame):
         self._append_log("\nGitHub Push Results:")
         for filename, url in results.items():
             self._append_log(f"  {filename}: {url}")
+        from datetime import datetime, timezone
+        bust = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+        self._append_log(f"\nCache-bust parameter for Claude instructions: ?v={bust}")
+        self._append_log("Update your Claude Project instructions URLs with this value.")
 
     def _on_success(self, summary: dict) -> None:
         self._status_var.set("done")

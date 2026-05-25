@@ -24,6 +24,7 @@ class GitHubPublisher:
         output_path = Path(output_dir)
         files = list(output_path.iterdir())
         results: dict[str, str] = {}
+        self._push_timestamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
 
         for file in files:
             if not file.is_file():
@@ -36,6 +37,14 @@ class GitHubPublisher:
             except Exception as exc:
                 logger.warning("Failed to publish %s: %s", file.name, exc)
                 results[file.name] = f"ERROR: {exc}"
+
+        # Write cache-bust marker file
+        try:
+            marker = json.dumps({"pushed_at": self._push_timestamp}).encode("utf-8")
+            marker_path = f"{self.target_dir}/.cache_bust"
+            self._push_bytes(marker_path, marker, f"chore: cache bust [{self._push_timestamp}]")
+        except Exception as exc:
+            logger.warning("Failed to write cache bust marker: %s", exc)
 
         return results
 
@@ -66,6 +75,15 @@ class GitHubPublisher:
         url = f"{_GITHUB_API}/repos/{self.repo}/contents/{remote_path}"
         self._request(url, method="PUT", payload=payload)
         return f"https://github.com/{self.repo}/blob/{self.branch}/{remote_path}"
+
+    def _push_bytes(self, remote_path: str, content: bytes, message: str) -> None:
+        encoded = base64.b64encode(content).decode("utf-8")
+        sha = self._get_existing_sha(remote_path)
+        payload: dict = {"message": message, "content": encoded, "branch": self.branch}
+        if sha:
+            payload["sha"] = sha
+        url = f"{_GITHUB_API}/repos/{self.repo}/contents/{remote_path}"
+        self._request(url, method="PUT", payload=payload)
 
     def _get_existing_sha(self, remote_path: str) -> str | None:
         url = f"{_GITHUB_API}/repos/{self.repo}/contents/{remote_path}?ref={self.branch}"
