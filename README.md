@@ -98,3 +98,21 @@ python tools/summarize.py path/to/access_compiled.json
 - **Impact analysis** — trace what breaks if a table field changes
 - **Automatic documentation** — generate human-readable app descriptions
 - **Graph database import** — nodes/edges map directly to Neo4j or similar
+
+## AI Usage
+
+The summarizer produces three files designed to be attached to an AI assistant (e.g. a Claude project). Each serves a distinct purpose:
+
+**`access_summary.md`**
+> "Use this file to orient yourself on the application. It contains the data model, form hierarchy, navigation flows, key logic hubs, and dead controls. Read this first before answering any question."
+
+**`access_index.json`**
+> "Use this file to answer questions about specific forms. For any form name, look up its events, controls, subforms, and field bindings here."
+
+**`access_graph_compact.json`**
+> "Use this file only when tracing cross-form dependencies — which procedures call which, which events open which forms. Do not load this whole file; query it for specific nodes."
+
+**Recommended context budget:**
+- Most questions: summary + index (~30k tokens)
+- Dependency tracing: add compact graph (~50k tokens additional)
+- Full load: ~80k tokens, fits comfortably in a 200k context window
