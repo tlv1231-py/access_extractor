@@ -30,15 +30,15 @@ class GitHubPublisher:
             if not file.is_file():
                 continue
             try:
-                remote_path = f"{self.target_dir}/{file.name}"
+                remote_name = self._normalize_filename(file.name)
+                remote_path = f"{self.target_dir}/{remote_name}"
                 url = self._push_file(file, remote_path)
-                results[file.name] = url
+                results[remote_name] = url
                 logger.info("Published: %s → %s", file.name, remote_path)
             except Exception as exc:
                 logger.warning("Failed to publish %s: %s", file.name, exc)
                 results[file.name] = f"ERROR: {exc}"
 
-        # Write cache-bust marker file
         try:
             marker = json.dumps({"pushed_at": self._push_timestamp}).encode("utf-8")
             marker_path = f"{self.target_dir}/.cache_bust"
@@ -47,6 +47,19 @@ class GitHubPublisher:
             logger.warning("Failed to write cache bust marker: %s", exc)
 
         return results
+
+    def _normalize_filename(self, filename: str) -> str:
+        static_names = {
+            "access_summary.md",
+            "access_graph_compact.json",
+            "access_index.json",
+        }
+        if filename in static_names:
+            return filename
+        # Any other .json file is the full compiled graph — normalize to static name
+        if filename.endswith(".json"):
+            return "full_graph.json"
+        return filename
 
     def cleanup(self, output_dir: str | Path) -> None:
         output_path = Path(output_dir)
