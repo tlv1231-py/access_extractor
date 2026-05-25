@@ -39,6 +39,16 @@ class GitHubPublisher:
 
         return results
 
+    def cleanup(self, output_dir: str | Path) -> None:
+        output_path = Path(output_dir)
+        for file in output_path.iterdir():
+            if file.is_file():
+                try:
+                    file.unlink()
+                    logger.info("Deleted local file: %s", file.name)
+                except Exception as exc:
+                    logger.warning("Failed to delete %s: %s", file.name, exc)
+
     def _push_file(self, local_path: Path, remote_path: str) -> str:
         content = base64.b64encode(local_path.read_bytes()).decode("utf-8")
         sha = self._get_existing_sha(remote_path)
