@@ -1,0 +1,1635 @@
+{
+  "nodes": [
+    {
+      "id": "table:CUSTOMER",
+      "kind": "Table",
+      "name": "CUSTOMER",
+      "properties": {
+        "fields": [
+          {
+            "name": "CID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Title",
+            "type": 10,
+            "size": 15
+          },
+          {
+            "name": "Fname",
+            "type": 10,
+            "size": 25
+          },
+          {
+            "name": "Lname",
+            "type": 10,
+            "size": 30
+          },
+          {
+            "name": "Company",
+            "type": 10,
+            "size": 75
+          },
+          {
+            "name": "Street1",
+            "type": 10,
+            "size": 60
+          },
+          {
+            "name": "City",
+            "type": 10,
+            "size": 20
+          },
+          {
+            "name": "State",
+            "type": 10,
+            "size": 2
+          },
+          {
+            "name": "Zip",
+            "type": 10,
+            "size": 10
+          },
+          {
+            "name": "Source",
+            "type": 10,
+            "size": 255
+          },
+          {
+            "name": "Map",
+            "type": 10,
+            "size": 3
+          },
+          {
+            "name": "Grid",
+            "type": 10,
+            "size": 5
+          },
+          {
+            "name": "Phone",
+            "type": 10,
+            "size": 14
+          },
+          {
+            "name": "Fax",
+            "type": 10,
+            "size": 15
+          },
+          {
+            "name": "Evening Phone",
+            "type": 10,
+            "size": 15
+          },
+          {
+            "name": "Customer Note",
+            "type": 12,
+            "size": 0
+          },
+          {
+            "name": "Referance",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Cell Phone",
+            "type": 10,
+            "size": 50
+          },
+          {
+            "name": "E-Mail",
+            "type": 12,
+            "size": 0
+          },
+          {
+            "name": "Tax Exempt",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Wood Chips",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Firewood",
+            "type": 1,
+            "size": 1
+          }
+        ],
+        "record_count": 6049
+      }
+    },
+    {
+      "id": "table:DESCRIPTION",
+      "kind": "Table",
+      "name": "DESCRIPTION",
+      "properties": {
+        "fields": [
+          {
+            "name": "DID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Descriptoin",
+            "type": 10,
+            "size": 255
+          }
+        ],
+        "record_count": 83
+      }
+    },
+    {
+      "id": "table:EVENT",
+      "kind": "Table",
+      "name": "EVENT",
+      "properties": {
+        "fields": [
+          {
+            "name": "OID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Line No",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Event_No",
+            "type": 7,
+            "size": 8
+          },
+          {
+            "name": "Event_Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Prod Type",
+            "type": 10,
+            "size": 10
+          },
+          {
+            "name": "Completed",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Complete_Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "To Bill",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Billed",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Bill_Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Event Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Paid Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Paid Total",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Total Order Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Total Order Tax",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Total Order",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Total Accepted Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Total Accepted Tax",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Total Accepted",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Paid in full",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Days Outstanding",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Billed 2",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Billed 3",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Billed 4",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Bill_Date 2",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Bill_Date 3",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Bill_Date 4",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Invoice note",
+            "type": 10,
+            "size": 255
+          },
+          {
+            "name": "Gallonage",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Invoice_Id",
+            "type": 4,
+            "size": 4
+          }
+        ],
+        "record_count": 8578
+      }
+    },
+    {
+      "id": "table:LOCATION",
+      "kind": "Table",
+      "name": "LOCATION",
+      "properties": {
+        "fields": [
+          {
+            "name": "Location",
+            "type": 10,
+            "size": 20
+          }
+        ],
+        "record_count": 113
+      }
+    },
+    {
+      "id": "table:Map data",
+      "kind": "Table",
+      "name": "Map data",
+      "properties": {
+        "fields": [
+          {
+            "name": "Street",
+            "type": 10,
+            "size": 50
+          },
+          {
+            "name": "City",
+            "type": 10,
+            "size": 50
+          }
+        ],
+        "record_count": 22
+      }
+    },
+    {
+      "id": "table:ORDER",
+      "kind": "Table",
+      "name": "ORDER",
+      "properties": {
+        "fields": [
+          {
+            "name": "OID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "CID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Order",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Proposal Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Accept Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Work Street",
+            "type": 10,
+            "size": 60
+          },
+          {
+            "name": "Work City",
+            "type": 10,
+            "size": 15
+          },
+          {
+            "name": "Work State",
+            "type": 10,
+            "size": 2
+          },
+          {
+            "name": "Work Zip",
+            "type": 10,
+            "size": 15
+          },
+          {
+            "name": "Paid Amount",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Job Note",
+            "type": 10,
+            "size": 255
+          },
+          {
+            "name": "Office Note",
+            "type": 12,
+            "size": 0
+          },
+          {
+            "name": "Annual Contract",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Work Name",
+            "type": 10,
+            "size": 50
+          },
+          {
+            "name": "Work Map",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Work Grid",
+            "type": 10,
+            "size": 50
+          },
+          {
+            "name": "Winter Work",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2025 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2024 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2023 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2022 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2021 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2020 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2019 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2018 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2017 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2016 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2015 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2014 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2013 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2012 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2011 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2010 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2009 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2008 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2007 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2006 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2005 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "PrePaid Disc Given",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Write-Off Given",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 1",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 2",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 3",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 4",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 5",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 6",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 1",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 2",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 3",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 4",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 5",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 6",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Ck # 1",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 2",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 3",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 4",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 5",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 6",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Service Declined",
+            "type": 1,
+            "size": 1
+          }
+        ],
+        "record_count": 903
+      }
+    },
+    {
+      "id": "table:ORDER DETAIL",
+      "kind": "Table",
+      "name": "ORDER DETAIL",
+      "properties": {
+        "fields": [
+          {
+            "name": "OID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Line No",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Prod Type",
+            "type": 10,
+            "size": 10
+          },
+          {
+            "name": "Location",
+            "type": 10,
+            "size": 24
+          },
+          {
+            "name": "Plant",
+            "type": 10,
+            "size": 21
+          },
+          {
+            "name": "Description",
+            "type": 10,
+            "size": 255
+          },
+          {
+            "name": "Pest",
+            "type": 10,
+            "size": 125
+          },
+          {
+            "name": "Start",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "25 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "24 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "23 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "22 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "21 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "20 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "19 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "18 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "17 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "16 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "15 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "14 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "13 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "12 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "11 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "10 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "09 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "08 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "07 Price",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Accept",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "25 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "24 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "23 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "22 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "21 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "20 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "19 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "18 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "17 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "16 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "15 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "14 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "13 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "12 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "11 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "10 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "09 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "08 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "07 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Accepted Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "CrewID",
+            "type": 10,
+            "size": 10
+          },
+          {
+            "name": "ScheduleDate",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "ScheduleReady",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Priority",
+            "type": 10,
+            "size": 10
+          },
+          {
+            "name": "LargeTree",
+            "type": 1,
+            "size": 1
+          }
+        ],
+        "record_count": 7495
+      }
+    },
+    {
+      "id": "table:OrderSource",
+      "kind": "Table",
+      "name": "OrderSource",
+      "properties": {
+        "fields": [
+          {
+            "name": "OID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "CID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Order",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Proposal Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Accept Date",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Work Street",
+            "type": 10,
+            "size": 60
+          },
+          {
+            "name": "Work City",
+            "type": 10,
+            "size": 15
+          },
+          {
+            "name": "Work State",
+            "type": 10,
+            "size": 2
+          },
+          {
+            "name": "Work Zip",
+            "type": 10,
+            "size": 15
+          },
+          {
+            "name": "Paid Amount",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Job Note",
+            "type": 10,
+            "size": 255
+          },
+          {
+            "name": "Office Note",
+            "type": 12,
+            "size": 0
+          },
+          {
+            "name": "Annual Contract",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "Work Name",
+            "type": 10,
+            "size": 50
+          },
+          {
+            "name": "Work Map",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Work Grid",
+            "type": 10,
+            "size": 50
+          },
+          {
+            "name": "Winter Work",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2025 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2024 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2023 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2022 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2021 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2020 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2019 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2018 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2017 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2016 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2015 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2014 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2013 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2012 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2011 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2010 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2009 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2008 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2007 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2006 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "2005 Accepted",
+            "type": 1,
+            "size": 1
+          },
+          {
+            "name": "PrePaid Disc Given",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Write-Off Given",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 1",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 2",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 3",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 4",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 5",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Amt 6",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 1",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 2",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 3",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 4",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 5",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Pd Date 6",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "Ck # 1",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 2",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 3",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 4",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 5",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Ck # 6",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "Service Declined",
+            "type": 1,
+            "size": 1
+          }
+        ],
+        "record_count": 903
+      }
+    },
+    {
+      "id": "table:Paste Errors",
+      "kind": "Table",
+      "name": "Paste Errors",
+      "properties": {
+        "fields": [
+          {
+            "name": "Field0",
+            "type": 12,
+            "size": 0
+          }
+        ],
+        "record_count": 1
+      }
+    },
+    {
+      "id": "table:Payments",
+      "kind": "Table",
+      "name": "Payments",
+      "properties": {
+        "fields": [
+          {
+            "name": "PaymentID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "OrderID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "ScheduledSprayID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "CID",
+            "type": 4,
+            "size": 4
+          },
+          {
+            "name": "PaymentDate",
+            "type": 8,
+            "size": 8
+          },
+          {
+            "name": "AmountPaid",
+            "type": 5,
+            "size": 8
+          },
+          {
+            "name": "PaidIndex",
+            "type": 2,
+            "size": 1
+          },
+          {
+            "name": "Notes",
+            "type": 10,
+            "size": 255
+          }
+        ],
+        "record_count": 504
+      }
+    }
+  ],
+  "edges": [
+    {
+      "src": "table:EVENT",
+      "dst": "table:PRODUCT",
+      "kind": "DEPENDS_ON",
+      "properties": {
+        "name": "[C:\\Users\\user\\Documents\\Code\\Acme\\DB\\data-2026_5.1.accdb].{232A51A7-F52C-4782-830B-2DEC062158B1}",
+        "foreign_table": "EVENT",
+        "primary_table": "PRODUCT",
+        "join_fields": [
+          {
+            "foreign_field": "Prod Type",
+            "primary_field": "Prod Type"
+          }
+        ],
+        "enforced": false,
+        "cascade_update": false,
+        "cascade_delete": false
+      }
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.Customer Note",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.CID",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.Label1",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.Source",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.Label2",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.Label5",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.Referance",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Custnoteform",
+      "dst": "ctrl:Custnoteform.Label6",
+      "kind": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "src": "form:Invoice SwitchBoard",
+      "dst": "ctrl:Invoice SwitchBoard.Box71",
+      "kind": "CONTAINS",
+      "properties": {}
+    }
+  ],
+  "hierarchy": {
+    "form:Custnoteform": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Invoice SwitchBoard": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:OrderSwitchBoard": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:YEAR END SWITCHBOARD": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Pest": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:SpraySwitchBoard": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:TreeSwitchBoard": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Customer 2": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Job Note": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:frmInvoiceGenerator": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:SwitchBoard11": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:subfrmTotalReceivables": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:SwitchBoard1a": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:App_PPHM_Completed": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:App_Spray_Completed": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:frmSuperScheduler": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:frmSuperSchedulerSub": {
+          "depth": 1,
+          "embedding_control": "frmSuperSchedulerSub",
+          "children": {}
+        },
+        "form:frmCrew1Sub": {
+          "depth": 1,
+          "embedding_control": "frmCrew1Sub",
+          "children": {}
+        },
+        "form:frmCrew2Sub": {
+          "depth": 1,
+          "embedding_control": "frmCrew2Sub",
+          "children": {}
+        }
+      }
+    },
+    "form:ORDER EDIT": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:ORDER_DETAIL": {
+          "depth": 1,
+          "embedding_control": "ORDER_DETAIL",
+          "children": {}
+        }
+      }
+    },
+    "form:Plant": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:SwitchBoard1": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:SwitchBoard2": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Cust form": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:INVOICE EDIT FORM": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:ORDER_DETAIL_INVOICE2": {
+          "depth": 1,
+          "embedding_control": "ORDER_DETAIL_INVOICE2",
+          "children": {}
+        }
+      }
+    },
+    "form:SwitchBoard": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Treatment": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:Treatment Detail": {
+          "depth": 1,
+          "embedding_control": "Treatment Detail",
+          "children": {}
+        }
+      }
+    },
+    "form:Customer": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Customer 3": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Copy of ORDER": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:ORDER_DETAIL": {
+          "depth": 1,
+          "embedding_control": "ORDER_DETAIL",
+          "children": {}
+        }
+      }
+    },
+    "form:DESCRIPTION": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:ORDER": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:ORDER_DETAIL": {
+          "depth": 1,
+          "embedding_control": "ORDER_DETAIL",
+          "children": {}
+        }
+      }
+    },
+    "form:ORDER_DET_DISP": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:ORDER_DET_DISP_EVENT": {
+          "depth": 1,
+          "embedding_control": "ORDER_DET_DISP_EVENT",
+          "children": {}
+        }
+      }
+    },
+    "form:Chemical": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Events To Do": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:ORDER EDIT1": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:ORDER_DETAIL": {
+          "depth": 1,
+          "embedding_control": "ORDER_DETAIL",
+          "children": {}
+        }
+      }
+    },
+    "form:Invoice SwitchBoard1": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:TOTALS": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:Invoice SwitchBoard2": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:SwitchboardAccountsReceivable": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    },
+    "form:frmCustomerFilterTest2": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {
+        "form:frmCustomerSubFormTest": {
+          "depth": 1,
+          "embedding_control": "frmCustomerSubFormTest",
+          "children": {}
+        }
+      }
+    },
+    "form:frmCustomerFilterTest1": {
+      "depth": 0,
+      "embedding_control": null,
+      "children": {}
+    }
+  }
+}

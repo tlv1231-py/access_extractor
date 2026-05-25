@@ -1,0 +1,3639 @@
+{
+  "Custnoteform": {
+    "fields": [
+      "CID",
+      "Customer Note",
+      "Referance",
+      "Source"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Invoice SwitchBoard": {
+    "fields": [],
+    "controls_with_events": [
+      "Opens Edit invoice",
+      "Opens Invoice Edit Form",
+      "Mark Billed and Bill Date",
+      "opens work input",
+      "Command29",
+      "Command31",
+      "Command40",
+      "Command43",
+      "Command45",
+      "Command46",
+      "Command47",
+      "Command49",
+      "Command51",
+      "shows all Check #s and Amts. marked To be deposited",
+      "Command78",
+      "Command79",
+      "Command81",
+      "Command82",
+      "Command84",
+      "Command89",
+      "Command90",
+      "Command91",
+      "Command93",
+      "Command94",
+      "Command95",
+      "Command96",
+      "Command102",
+      "Command103",
+      "Command104",
+      "Command105"
+    ],
+    "events": [
+      {
+        "control": "Opens Edit invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens Invoice Edit Form",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Mark Billed and Bill Date",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "opens work input",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command29",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command31",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command40",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command43",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command45",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command46",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command47",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command49",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command51",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "shows all Check #s and Amts. marked To be deposited",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command78",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command79",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command81",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command82",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command84",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command89",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command90",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command91",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command93",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command94",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command95",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command96",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command102",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command103",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command104",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command105",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "OrderSwitchBoard": {
+    "fields": [],
+    "controls_with_events": [
+      "Orders",
+      "Customer",
+      "prop by cust",
+      "Close Order switchboard",
+      "Opens Customer Edit",
+      "Est form",
+      "Command39",
+      "Command40",
+      "runs customer info query",
+      "Command42",
+      "Command43",
+      "Command44",
+      "Command47",
+      "Command48",
+      "Command49",
+      "Command54",
+      "Command55"
+    ],
+    "events": [
+      {
+        "control": "Orders",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Customer",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "prop by cust",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Close Order switchboard",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens Customer Edit",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Est form",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command39",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command40",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "runs customer info query",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command42",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command43",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command44",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command47",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command48",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command49",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command54",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command55",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "YEAR END SWITCHBOARD": {
+    "fields": [
+      "AvgOfPrice",
+      "CountOfOID",
+      "Prod Type",
+      "SumOfPrice"
+    ],
+    "controls_with_events": [
+      "Command49",
+      "Command19",
+      "Command22",
+      "Command23",
+      "Command24",
+      "Command25",
+      "Command26",
+      "Annual year end",
+      "line by OID",
+      "runs query for mail merge &labels",
+      "pp",
+      "Command47",
+      "Command51",
+      "Command54",
+      "Command57",
+      "Command58",
+      "Command59",
+      "Command60",
+      "Command61",
+      "Command67",
+      "Command68",
+      "Office Notes Changes"
+    ],
+    "events": [
+      {
+        "control": "Command49",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command19",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command22",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command23",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command24",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command25",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command26",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Annual year end",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "line by OID",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "runs query for mail merge &labels",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "pp",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command47",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command51",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command54",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command57",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command58",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command59",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command60",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command61",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command67",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command68",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Office Notes Changes",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "ORDER_DETAIL": {
+    "fields": [
+      "Accept",
+      "Description",
+      "Line No",
+      "Location",
+      "Pest",
+      "Plant",
+      "Price",
+      "Prod Type",
+      "Start"
+    ],
+    "controls_with_events": [
+      "Button19"
+    ],
+    "events": [
+      {
+        "control": "Button19",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "Pest": {
+    "fields": [
+      "Pest",
+      "Pest Dectription"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "SpraySwitchBoard": {
+    "fields": [
+      "SumOfPrice"
+    ],
+    "controls_with_events": [
+      "Inputs IPM info",
+      "opens up Spring_Sprays",
+      "opens PPHMs to do",
+      "opens DRF query",
+      "runs query to input completed sp,PPHM,Lawn",
+      "Run query to input completed DRF",
+      "Command44",
+      "Command45",
+      "Command46",
+      "Command47",
+      "Command48",
+      "Command50",
+      "Command61",
+      "Command62",
+      "Command65",
+      "Command66",
+      "Command74",
+      "Command78",
+      "Run Merit Query",
+      "Run Merit input by OID query",
+      "Run Merit_to_Input query"
+    ],
+    "events": [
+      {
+        "control": "Inputs IPM info",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "opens up Spring_Sprays",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "opens PPHMs to do",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "opens DRF query",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "runs query to input completed sp,PPHM,Lawn",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Run query to input completed DRF",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command44",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command45",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command46",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command47",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command48",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command50",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command61",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command62",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command65",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command66",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command74",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command78",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Run Merit Query",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Run Merit input by OID query",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Run Merit_to_Input query",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "TreeSwitchBoard": {
+    "fields": [],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Customer 2": {
+    "fields": [
+      "CUSTOMER.CID",
+      "CUSTOMER.Lname",
+      "Cell Phone",
+      "City",
+      "Company",
+      "Customer Note",
+      "E-Mail",
+      "Evening Phone",
+      "Fax",
+      "Firewood",
+      "Fname",
+      "Grid",
+      "Map",
+      "Phone",
+      "Referance",
+      "Source",
+      "State",
+      "Street1",
+      "Tax Exempt",
+      "Title",
+      "Wood Chips",
+      "Zip"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Treatment Detail": {
+    "fields": [
+      "Line No",
+      "Time of Year End",
+      "Time of Year Start"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Job Note": {
+    "fields": [
+      "CUSTOMER.Lname",
+      "City",
+      "Company",
+      "Customer Note",
+      "Evening Phone",
+      "Fax",
+      "Fname",
+      "Grid",
+      "Map",
+      "Phone",
+      "Source",
+      "State",
+      "Street1",
+      "Title",
+      "Zip"
+    ],
+    "controls_with_events": [
+      "Button53"
+    ],
+    "events": [
+      {
+        "control": "Button53",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "frmInvoiceGenerator": {
+    "fields": [],
+    "controls_with_events": [
+      "btnGenerateInvoice"
+    ],
+    "events": [
+      {
+        "control": "btnGenerateInvoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "ORDER_DET_DISP_EVENT": {
+    "fields": [
+      "Bill_Date",
+      "Billed",
+      "Complete_Date",
+      "Completed",
+      "Event Price",
+      "Event_Date",
+      "Event_No",
+      "Paid Date",
+      "Price",
+      "To Bill"
+    ],
+    "controls_with_events": [
+      "Completed",
+      "Billed"
+    ],
+    "events": [
+      {
+        "control": "Completed",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Billed",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "SwitchBoard11": {
+    "fields": [],
+    "controls_with_events": [
+      "Orders",
+      "Customer",
+      "Button3",
+      "prop by cust"
+    ],
+    "events": [
+      {
+        "control": "Orders",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Customer",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button3",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "prop by cust",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "subfrmTotalReceivables": {
+    "fields": [
+      "TotalAmountDue"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "SwitchBoard1a": {
+    "fields": [],
+    "controls_with_events": [
+      "opens Orderswitchboardform",
+      "Openssprayswitchboard",
+      "Opens the Invoice Switchboard",
+      "Command49"
+    ],
+    "events": [
+      {
+        "control": "opens Orderswitchboardform",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Openssprayswitchboard",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens the Invoice Switchboard",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command49",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "App_PPHM_Completed": {
+    "fields": [
+      "City",
+      "Complete_Date",
+      "Completed",
+      "Event Price",
+      "Event_Date",
+      "Frequency",
+      "Lname",
+      "Pest",
+      "Plant",
+      "Price",
+      "Street1"
+    ],
+    "controls_with_events": [
+      "Find",
+      "Completed",
+      "Button23"
+    ],
+    "events": [
+      {
+        "control": "Find",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Completed",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button23",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "App_Spray_Completed": {
+    "fields": [
+      "City",
+      "Complete_Date",
+      "Completed",
+      "Lname",
+      "Pest",
+      "Plant",
+      "Price",
+      "Street1"
+    ],
+    "controls_with_events": [
+      "Find",
+      "Completed"
+    ],
+    "events": [
+      {
+        "control": "Find",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Completed",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "frmSuperScheduler": {
+    "fields": [],
+    "controls_with_events": [
+      "cmbLname",
+      "cmbCity",
+      "cmbZip",
+      "cmbMap",
+      "cmbGrid",
+      "cmbPriority",
+      "cmdReset",
+      "cmdMapCrew1",
+      "cmdScheduleCrew1",
+      "cmdScheduleCrew2",
+      "cmdMapCrew2",
+      "cmbPest",
+      "cmbProdType",
+      "cmbCrew",
+      "cmdDateBack",
+      "cmdDateForward",
+      "cmdUpdateScheduling",
+      "cmbLargeTree",
+      "cmbStartDate"
+    ],
+    "events": [
+      {
+        "control": "cmbLname",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbCity",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbZip",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbMap",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbGrid",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbPriority",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdReset",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdMapCrew1",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdScheduleCrew1",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdScheduleCrew2",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdMapCrew2",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbPest",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbProdType",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbCrew",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdDateBack",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdDateForward",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmdUpdateScheduling",
+        "event": "OnClick",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbLargeTree",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      },
+      {
+        "control": "cmbStartDate",
+        "event": "AfterUpdate",
+        "calls": [
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:RefreshSubform",
+          "proc:RefreshAllSubforms",
+          "proc:ScheduleCrew",
+          "proc:ScheduleCrew",
+          "proc:RefreshAllSubforms"
+        ],
+        "opens": [
+          "report:rptCrewSchedule",
+          "report:rptMissingStartDates"
+        ],
+        "runs": []
+      }
+    ],
+    "subforms": [
+      "frmSuperSchedulerSub",
+      "frmCrew1Sub",
+      "frmCrew2Sub"
+    ]
+  },
+  "ORDER EDIT": {
+    "fields": [
+      "Accept Date",
+      "CUSTOMER.Lname",
+      "City",
+      "Company",
+      "Evening Phone",
+      "Fname",
+      "Grid",
+      "Map",
+      "OID",
+      "Order",
+      "Order.CID",
+      "Phone",
+      "Proposal Date",
+      "State",
+      "Street1",
+      "Title",
+      "Work City",
+      "Work State",
+      "Work Street",
+      "Work Zip",
+      "Zip"
+    ],
+    "controls_with_events": [
+      "Order_CID_LookUP",
+      "Button71",
+      "Print Proposal",
+      "Button80",
+      "Button81",
+      "Button97",
+      "Button98",
+      "Button99",
+      "Button100",
+      "Button101",
+      "Button102"
+    ],
+    "events": [
+      {
+        "control": "Order_CID_LookUP",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Order_CID_LookUP",
+        "event": "BeforeUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Order_CID_LookUP",
+        "event": "OnExit",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button71",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Print Proposal",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button80",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button81",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button97",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button98",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button99",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button100",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button101",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button102",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": [
+      "ORDER_DETAIL"
+    ]
+  },
+  "Plant": {
+    "fields": [
+      "Plant"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "SwitchBoard1": {
+    "fields": [],
+    "controls_with_events": [
+      "opens Orderswitchboardform",
+      "Openssprayswitchboard",
+      "Opens the Invoice Switchboard",
+      "Command49",
+      "Command51",
+      "Command52",
+      "AccountsReceivableButton"
+    ],
+    "events": [
+      {
+        "control": "opens Orderswitchboardform",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "form:SwitchboardAccountsReceivable"
+        ],
+        "runs": []
+      },
+      {
+        "control": "Openssprayswitchboard",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "form:SwitchboardAccountsReceivable"
+        ],
+        "runs": []
+      },
+      {
+        "control": "Opens the Invoice Switchboard",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "form:SwitchboardAccountsReceivable"
+        ],
+        "runs": []
+      },
+      {
+        "control": "Command49",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "form:SwitchboardAccountsReceivable"
+        ],
+        "runs": []
+      },
+      {
+        "control": "Command51",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "form:SwitchboardAccountsReceivable"
+        ],
+        "runs": []
+      },
+      {
+        "control": "Command52",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "form:SwitchboardAccountsReceivable"
+        ],
+        "runs": []
+      },
+      {
+        "control": "AccountsReceivableButton",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "form:SwitchboardAccountsReceivable"
+        ],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "SwitchBoard2": {
+    "fields": [],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Cust form": {
+    "fields": [
+      "CUSTOMER.Lname",
+      "CUSTOMER.Referance",
+      "City",
+      "Company",
+      "Customer Note",
+      "Evening Phone",
+      "Fax",
+      "Fname",
+      "Grid",
+      "Map",
+      "Phone",
+      "Source",
+      "State",
+      "Street1",
+      "Title",
+      "Zip"
+    ],
+    "controls_with_events": [
+      "Button53"
+    ],
+    "events": [
+      {
+        "control": "Button53",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "INVOICE EDIT FORM": {
+    "fields": [
+      "Bill_Date",
+      "Billed",
+      "Check Number 1",
+      "Check Number 2",
+      "Check Number 3",
+      "Check Number 4",
+      "Check Number 5",
+      "Check Number 6",
+      "City",
+      "Company",
+      "Fname",
+      "Invoice note",
+      "Lname",
+      "OID",
+      "Paid  date 2",
+      "Paid Amount",
+      "Paid Amount 2",
+      "Paid Amount 3",
+      "Paid Amount 4",
+      "Paid Amount 5",
+      "Paid Amount 6",
+      "Paid Date 1",
+      "Paid date 3",
+      "Paid date 4",
+      "Paid date 5",
+      "Paid date 6",
+      "Paid in full",
+      "State",
+      "Street1",
+      "Title",
+      "To Bill",
+      "Work City",
+      "Work State",
+      "Work Street",
+      "Work Zip",
+      "Zip"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": [
+      "ORDER_DETAIL_INVOICE2"
+    ]
+  },
+  "SwitchBoard": {
+    "fields": [],
+    "controls_with_events": [
+      "Orders",
+      "Customer",
+      "Button3"
+    ],
+    "events": [
+      {
+        "control": "Orders",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Customer",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button3",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "Treatment": {
+    "fields": [
+      "Chemical",
+      "ID",
+      "Pest",
+      "Plant",
+      "Times"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": [
+      "Treatment Detail"
+    ]
+  },
+  "Customer": {
+    "fields": [
+      "CUSTOMER.E-Mail",
+      "CUSTOMER.Lname",
+      "Cell Phone",
+      "City",
+      "Company",
+      "Customer Note",
+      "Evening Phone",
+      "Fax",
+      "Firewood",
+      "Fname",
+      "Grid",
+      "Map",
+      "Phone",
+      "Referance",
+      "Source",
+      "State",
+      "Street1",
+      "Tax Exempt",
+      "Title",
+      "Wood Chips",
+      "Zip"
+    ],
+    "controls_with_events": [
+      "add cust button"
+    ],
+    "events": [
+      {
+        "control": "add cust button",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "Customer 3": {
+    "fields": [
+      "CUSTOMER.CID",
+      "CUSTOMER.Lname",
+      "CUSTOMER.Referance",
+      "City",
+      "Company",
+      "Customer Note",
+      "Evening Phone",
+      "Fax",
+      "Fname",
+      "Grid",
+      "Map",
+      "OID",
+      "Phone",
+      "Prod Type",
+      "Source",
+      "State",
+      "Street1",
+      "Title",
+      "Zip"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Copy of ORDER": {
+    "fields": [
+      "Accept Date",
+      "Annual Contract",
+      "CUSTOMER.CID",
+      "Cell Phone",
+      "City",
+      "Ck # 1",
+      "Ck # 2",
+      "Ck # 3",
+      "Ck # 4",
+      "Ck # 5",
+      "Ck # 6",
+      "Company",
+      "E-Mail",
+      "Evening Phone",
+      "Fax",
+      "Firewood",
+      "Grid",
+      "Map",
+      "OID",
+      "Order",
+      "Order.CID",
+      "Order.Job Note",
+      "Order.Service Declined",
+      "Pd Amt 1",
+      "Pd Amt 2",
+      "Pd Amt 3",
+      "Pd Amt 4",
+      "Pd Amt 5",
+      "Pd Amt 6",
+      "Pd Date 1",
+      "Pd Date 2",
+      "Pd Date 3",
+      "Pd Date 4",
+      "Pd Date 5",
+      "Pd Date 6",
+      "Phone",
+      "PrePaid Disc Given",
+      "Proposal Date",
+      "Referance",
+      "State",
+      "Street1",
+      "Tax Exempt",
+      "Winter Work",
+      "Wood Chips",
+      "Work City",
+      "Work Grid",
+      "Work Map",
+      "Work Name",
+      "Work State",
+      "Work Street",
+      "Work Zip",
+      "Write-Off Given",
+      "Zip"
+    ],
+    "controls_with_events": [
+      "Order_CID_LookUP",
+      "Button71",
+      "Button81",
+      "Button98",
+      "Button99",
+      "Preview Worksheet",
+      "Preview Spray",
+      "Preview PPHM",
+      "Single cover letter",
+      "Cover More than one Proposal",
+      "Opens Invoice edit form",
+      "IPM",
+      "Command146",
+      "Command147",
+      "Command148",
+      "Command153",
+      "Opens w review",
+      "Command155",
+      "Command159",
+      "Command162",
+      "Command170",
+      "Command175",
+      "Command180",
+      "Oder History",
+      "Command238",
+      "Command239",
+      "Command240",
+      "Table View"
+    ],
+    "events": [
+      {
+        "control": "Order_CID_LookUP",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Order_CID_LookUP",
+        "event": "OnExit",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button71",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button81",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button98",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button99",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Preview Worksheet",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Preview Spray",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Preview PPHM",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Single cover letter",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Cover More than one Proposal",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens Invoice edit form",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "IPM",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command146",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command147",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command148",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command153",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens w review",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command155",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command159",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command162",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command170",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command175",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command180",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Oder History",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command238",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command239",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command240",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Table View",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": [
+      "ORDER_DETAIL"
+    ]
+  },
+  "DESCRIPTION": {
+    "fields": [
+      "DID",
+      "Descriptoin"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "ORDER": {
+    "fields": [
+      "Accept Date",
+      "Annual Contract",
+      "CUSTOMER.CID",
+      "Cell Phone",
+      "City",
+      "Ck # 1",
+      "Ck # 2",
+      "Ck # 3",
+      "Ck # 4",
+      "Ck # 5",
+      "Ck # 6",
+      "Company",
+      "E-Mail",
+      "Evening Phone",
+      "Fax",
+      "Firewood",
+      "Grid",
+      "Map",
+      "OID",
+      "Order",
+      "Order.CID",
+      "Order.Job Note",
+      "Order.Office Note",
+      "Order.Service Declined",
+      "Pd Amt 1",
+      "Pd Amt 2",
+      "Pd Amt 3",
+      "Pd Amt 4",
+      "Pd Amt 5",
+      "Pd Amt 6",
+      "Pd Date 1",
+      "Pd Date 2",
+      "Pd Date 3",
+      "Pd Date 4",
+      "Pd Date 5",
+      "Pd Date 6",
+      "Phone",
+      "PrePaid Disc Given",
+      "Proposal Date",
+      "Referance",
+      "State",
+      "Street1",
+      "Tax Exempt",
+      "Winter Work",
+      "Wood Chips",
+      "Work City",
+      "Work Grid",
+      "Work Map",
+      "Work Name",
+      "Work State",
+      "Work Street",
+      "Work Zip",
+      "Write-Off Given",
+      "Zip"
+    ],
+    "controls_with_events": [
+      "Order_CID_LookUP",
+      "Button71",
+      "Button81",
+      "Button98",
+      "Button99",
+      "Preview Worksheet",
+      "Preview Spray",
+      "Preview PPHM",
+      "Single cover letter",
+      "Cover More than one Proposal",
+      "Opens Invoice edit form",
+      "IPM",
+      "Command146",
+      "Command147",
+      "Command148",
+      "Command153",
+      "Opens w review",
+      "Command155",
+      "Command159",
+      "Command162",
+      "Command170",
+      "Command175",
+      "Command180",
+      "Oder History",
+      "Command238",
+      "Command239",
+      "Command240",
+      "Table View",
+      "Sub Work Order"
+    ],
+    "events": [
+      {
+        "control": "Order_CID_LookUP",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Order_CID_LookUP",
+        "event": "OnExit",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button71",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button81",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button98",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button99",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Preview Worksheet",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Preview Spray",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Preview PPHM",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Single cover letter",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Cover More than one Proposal",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens Invoice edit form",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "IPM",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command146",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command147",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command148",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command153",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens w review",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command155",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command159",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command162",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command170",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command175",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command180",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Oder History",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command238",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command239",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command240",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Table View",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Sub Work Order",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": [
+      "ORDER_DETAIL"
+    ]
+  },
+  "ORDER_DET_DISP": {
+    "fields": [
+      "Application",
+      "Description",
+      "ORDER DETAIL.Price",
+      "Pest"
+    ],
+    "controls_with_events": [
+      "Button23"
+    ],
+    "events": [
+      {
+        "control": "Button23",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": [
+      "ORDER_DET_DISP_EVENT"
+    ]
+  },
+  "Chemical": {
+    "fields": [
+      "Chemical"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Events To Do": {
+    "fields": [
+      "Billed",
+      "City",
+      "Company",
+      "Description",
+      "EVENT.Completed",
+      "EVENT.Event_Date",
+      "EVENT.Prod Type",
+      "Evening Phone",
+      "Grid",
+      "Location",
+      "Map",
+      "Plant",
+      "Street1"
+    ],
+    "controls_with_events": [
+      "Button38",
+      "Dial"
+    ],
+    "events": [
+      {
+        "control": "Button38",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Dial",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "ORDER EDIT1": {
+    "fields": [
+      "Accept Date",
+      "CUSTOMER.Lname",
+      "City",
+      "Company",
+      "Evening Phone",
+      "Fname",
+      "Grid",
+      "Map",
+      "OID",
+      "Order",
+      "Order.CID",
+      "Phone",
+      "Proposal Date",
+      "State",
+      "Street1",
+      "Title",
+      "Work City",
+      "Work State",
+      "Work Street",
+      "Work Zip",
+      "Zip"
+    ],
+    "controls_with_events": [
+      "Order_CID_LookUP",
+      "Button71",
+      "Print Proposal",
+      "Button80",
+      "Button81",
+      "Button97",
+      "Button98",
+      "Button99",
+      "Button100",
+      "Button101",
+      "Button102"
+    ],
+    "events": [
+      {
+        "control": "Order_CID_LookUP",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Order_CID_LookUP",
+        "event": "BeforeUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Order_CID_LookUP",
+        "event": "OnExit",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button71",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Print Proposal",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button80",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button81",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button97",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button98",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button99",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button100",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button101",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Button102",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": [
+      "ORDER_DETAIL"
+    ]
+  },
+  "Invoice SwitchBoard1": {
+    "fields": [],
+    "controls_with_events": [
+      "Opens Edit invoice",
+      "Opens Invoice Edit Form",
+      "Mark Billed and Bill Date",
+      "opens work input",
+      "Command29",
+      "Command31",
+      "Command40",
+      "Command43",
+      "Command45",
+      "Command46",
+      "Command47",
+      "Command49",
+      "Command51",
+      "shows all Check #s and Amts. marked To be deposited",
+      "2ndpp/sp invoice",
+      "3rd sp/pp invoice",
+      "past due sp/pp invoice",
+      "Command78",
+      "Command79",
+      "Command81",
+      "Command82",
+      "Command84",
+      "Command88",
+      "Command89",
+      "Command90",
+      "Command91",
+      "Command92",
+      "Command93",
+      "Command94",
+      "Command95",
+      "Command96"
+    ],
+    "events": [
+      {
+        "control": "Opens Edit invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens Invoice Edit Form",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Mark Billed and Bill Date",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "opens work input",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command29",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command31",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command40",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command43",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command45",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command46",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command47",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command49",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command51",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "shows all Check #s and Amts. marked To be deposited",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "2ndpp/sp invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "3rd sp/pp invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "past due sp/pp invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command78",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command79",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command81",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command82",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command84",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command88",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command89",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command90",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command91",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command92",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command93",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command94",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command95",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command96",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "TOTALS": {
+    "fields": [
+      "LAWN",
+      "PERCENT GROWTH",
+      "PPHM",
+      "SPRAY",
+      "WORKSHEETS",
+      "YEAR",
+      "YEARS GROSS"
+    ],
+    "controls_with_events": [],
+    "events": [],
+    "subforms": []
+  },
+  "Invoice SwitchBoard2": {
+    "fields": [],
+    "controls_with_events": [
+      "Opens Edit invoice",
+      "Opens Invoice Edit Form",
+      "Mark Billed and Bill Date",
+      "opens work input",
+      "Command29",
+      "Command31",
+      "Command40",
+      "Command43",
+      "Command45",
+      "Command46",
+      "Command47",
+      "Command49",
+      "Command51",
+      "shows all Check #s and Amts. marked To be deposited",
+      "2ndpp/sp invoice",
+      "3rd sp/pp invoice",
+      "past due sp/pp invoice",
+      "Command78",
+      "Command79",
+      "Command81",
+      "Command82",
+      "Command84",
+      "Command88",
+      "Command89",
+      "Command90",
+      "Command91",
+      "Command92",
+      "Command93",
+      "Command94",
+      "Command95",
+      "Command96"
+    ],
+    "events": [
+      {
+        "control": "Opens Edit invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Opens Invoice Edit Form",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Mark Billed and Bill Date",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "opens work input",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command29",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command31",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command40",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command43",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command45",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command46",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command47",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command49",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command51",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "shows all Check #s and Amts. marked To be deposited",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "2ndpp/sp invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "3rd sp/pp invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "past due sp/pp invoice",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command78",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command79",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command81",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command82",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command84",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command88",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command89",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command90",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command91",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command92",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command93",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command94",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command95",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "Command96",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "SwitchboardAccountsReceivable": {
+    "fields": [],
+    "controls_with_events": [
+      "Command69",
+      "Command77",
+      "Command78"
+    ],
+    "events": [
+      {
+        "control": "Command69",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "report:rptReceivablesByClient",
+          "report:rptReceivablesDetails",
+          "form:Switchboard1",
+          "form:Switchboard1",
+          "form:Switchboard1",
+          "report:rptAcctsRcbvl2"
+        ],
+        "runs": []
+      },
+      {
+        "control": "Command77",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "report:rptReceivablesByClient",
+          "report:rptReceivablesDetails",
+          "form:Switchboard1",
+          "form:Switchboard1",
+          "form:Switchboard1",
+          "report:rptAcctsRcbvl2"
+        ],
+        "runs": []
+      },
+      {
+        "control": "Command78",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [
+          "report:rptReceivablesByClient",
+          "report:rptReceivablesDetails",
+          "form:Switchboard1",
+          "form:Switchboard1",
+          "form:Switchboard1",
+          "report:rptAcctsRcbvl2"
+        ],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  },
+  "frmCustomerFilterTest2": {
+    "fields": [
+      "Map"
+    ],
+    "controls_with_events": [
+      "cmbLname",
+      "cmbFname",
+      "cmbZip",
+      "cmbCID",
+      "btnReset",
+      "cmbCity",
+      "cmbMap",
+      "cmbGrid"
+    ],
+    "events": [
+      {
+        "control": "cmbLname",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "cmbFname",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "cmbZip",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "cmbCID",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "btnReset",
+        "event": "OnClick",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "cmbCity",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "cmbMap",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      },
+      {
+        "control": "cmbGrid",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": [
+      "frmCustomerSubFormTest"
+    ]
+  },
+  "frmCustomerFilterTest1": {
+    "fields": [
+      "CID",
+      "Fname",
+      "Lname"
+    ],
+    "controls_with_events": [
+      "Combo4"
+    ],
+    "events": [
+      {
+        "control": "Combo4",
+        "event": "AfterUpdate",
+        "calls": [],
+        "opens": [],
+        "runs": []
+      }
+    ],
+    "subforms": []
+  }
+}

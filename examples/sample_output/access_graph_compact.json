@@ -1,0 +1,107 @@
+{
+  "query_count": 360,
+  "nodes": [
+    {
+      "id": "proc:Invoice SwitchBoard_Opens Edit invoice_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Opens Edit invoice_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Opens Invoice Edit Form_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Opens Invoice Edit Form_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Mark Billed and Bill Date_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Mark Billed and Bill Date_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_opens work input_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_opens work input_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Command29_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Command29_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Command31_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Command31_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Command40_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Command40_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Command43_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Command43_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Command45_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Command45_OnClick"
+    },
+    {
+      "id": "proc:Invoice SwitchBoard_Command46_OnClick",
+      "kind": "Procedure",
+      "name": "Invoice SwitchBoard_Command46_OnClick"
+    }
+  ],
+  "edges": [
+    {
+      "src": "table:EVENT",
+      "dst": "table:PRODUCT",
+      "kind": "DEPENDS_ON"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Opens Edit invoice.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Opens Edit invoice_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Opens Invoice Edit Form.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Opens Invoice Edit Form_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Mark Billed and Bill Date.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Mark Billed and Bill Date_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.opens work input.OnClick",
+      "dst": "proc:Invoice SwitchBoard_opens work input_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Command29.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Command29_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Command31.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Command31_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Command40.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Command40_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Command43.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Command43_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    },
+    {
+      "src": "event:ctrl:Invoice SwitchBoard.Command45.OnClick",
+      "dst": "proc:Invoice SwitchBoard_Command45_OnClick",
+      "kind": "EVENT_TRIGGERS"
+    }
+  ]
+}

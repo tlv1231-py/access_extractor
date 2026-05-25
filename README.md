@@ -1,118 +1,149 @@
 # Access Extractor
 
-A compiler-grade reverse-engineering engine for Microsoft Access databases (`.accdb` / `.mdb`). Extracts structural and behavioral intelligence into a structured knowledge graph for AI reasoning, migration tooling, and automatic documentation.
+**AI-native extraction and context engine for Microsoft Access databases.**
+
+Extract schema, forms, queries, VBA, and object relationships from `.accdb`/`.mdb` files into structured JSON — then serve that context to LLMs and AI agents via a versioned SDK.
+
+---
 
 ## What It Does
 
-Most Access tooling tells you *what exists*. This tells you *how it behaves*.
+Most Access tooling is ancient, migration-focused, and AI-unaware.
 
-The extractor produces a full runtime intelligence model:
+This tool is different:
 
-- **Structural graph** — tables, queries, relationships, modules
-- **Form hierarchy** — recursive subform nesting, tab controls, embedded children
-- **Control metadata** — every control on every form with coordinates, bindings, and state
-- **Event binding graph** — OnClick, AfterUpdate, OnLoad, etc. resolved to VBA procedures or macros
-- **VBA static analysis** — traces `DoCmd.OpenForm`, `DoCmd.RunQuery`, control modifications, and procedure calls across the codebase
-- **AI summary pipeline** — compresses a 2MB Access database into ~23k tokens of structured, queryable knowledge
+- Extracts a full object dependency graph (tables, forms, controls, events, VBA procedures, queries, relationships)
+- Builds AI-readable context packs (summary markdown, compact graph, per-form event index)
+- Pushes exports to a GitHub repo as a versioned storage layer
+- Serves context to LLMs via a built-in SDK with caching, version pinning, and token-efficient slicing
 
-## Output
+.accdb / .mdb
+↓
+Access Extractor
+↓
+Structured JSON exports
+↓
+GitHub (versioned storage)
+↓
+context-sdk → LLM / AI Agent
 
-Running the extractor produces `access_compiled.json` — a graph document containing:
+---
 
-```json
-{
-  "nodes": [...],       // Form, Control, Query, Table, Module, Event, Procedure, Macro
-  "edges": [...],       // CONTAINS, EVENT_TRIGGERS, EVENT_OPENS_FORM, CALLS, EMBEDS_SUBFORM, ...
-  "hierarchy": {...},   // Nested subform tree
-  "structural": {...}   // Tables, queries, relationships
-}
+## Features
+
+### Extraction
+- Tables (fields, types, record counts)
+- Queries (SQL)
+- Relationships
+- Forms and subform hierarchy
+- Controls and control sources
+- VBA events and procedure bindings
+- Standalone VBA modules
+- Full object dependency graph (nodes + edges)
+
+### Output Files
+| File | Purpose |
+|------|---------|
+| `<db>.json` | Full compiled object graph |
+| `access_summary.md` | Human-readable overview |
+| `access_graph_compact.json` | Stripped graph for AI ingestion |
+| `access_index.json` | Per-form event and subform index |
+
+### Context SDK
+- Load context files from GitHub with one line
+- Version pinning (branch, tag, or commit SHA)
+- Two-tier cache (memory + optional disk)
+- Merge multiple databases into one context
+- Token-efficient slicing for LLM prompt injection
+
+---
+
+## Quickstart
+
+### 1. Install
+
+```bash
+git clone https://github.com/tlv1231-py/access_extractor
+cd access_extractor
+pip install -e .
 ```
 
-Running the summarizer produces three AI-optimized files:
+### 2. Run the UI
 
-| File | Size | Purpose |
-|---|---|---|
-| `access_summary.md` | ~42KB | Natural language app overview, data model, navigation flows |
-| `access_graph_compact.json` | ~200KB | Stripped graph — forms, procedures, and behavioral edges only |
-| `access_index.json` | ~81KB | Per-form lookup: events, controls, subforms, field bindings |
-
-## Architecture
-
-```
-[ Tkinter UI ]
-      ↓
-[ run_extraction(job) ]
-      ↓
-[ AccessSession (COM) ]
-      ↓
-[ Extractors: tables, queries, relationships, modules, forms, subforms, controls, events ]
-      ↓
-[ GraphBuilder → nodes + edges + hierarchy ]
-      ↓
-[ access_compiled.json ]
-      ↓
-[ tools/summarize.py → summary + compact graph + index ]
+```bash
+python main.py
 ```
 
-The UI layer is strictly thin — all Access intelligence lives in the extractor engine.
+- Select your `.accdb` or `.mdb` file
+- Select an output folder
+- Optionally enter a GitHub repo and token to auto-push exports
+- Hit Run
+
+### 3. Use the SDK
+
+```python
+from context_sdk import ContextEngine
+
+engine = ContextEngine(repo="your-org/your-exports-repo", token="ghp_...")
+ctx = engine.load_context("ai_context/access_graph_compact.json")
+
+prompt_block = engine.slice_for_prompt(
+    ctx,
+    keys=["tables", "forms"],
+    prefix="## Database Schema",
+)
+```
+
+---
+
+## Repository Structure
+
+access_extractor/
+├── extractor/          # Extraction engine
+│   ├── engine/         # Runner, compiler, session
+│   ├── extractors/     # Tables, forms, queries, VBA, relationships
+│   └── graph/          # Node/edge graph builder
+├── context_sdk/        # Context engine SDK
+│   ├── core/           # ContextEngine, GitHubClient
+│   ├── cache/          # Two-tier cache
+│   ├── schema/         # ContextEnvelope, metadata models
+│   └── context/        # Merger, slicer
+├── publisher/          # GitHub publishing layer
+├── tools/              # Summarizer
+├── ui/                 # Tkinter UI
+└── examples/           # Usage examples
+
+---
+
+## CLI
+
+```bash
+# Fetch a context file
+context-sdk fetch org/repo ai_context/access_graph_compact.json
+
+# Fetch specific keys only
+context-sdk fetch org/repo ai_context/access_graph_compact.json --keys tables forms
+
+# List available context files
+context-sdk list org/repo ai_context/
+
+# Pin current HEAD to a SHA for deterministic loads
+context-sdk pin org/repo
+
+# Merge multiple context files
+context-sdk merge org/repo ai_context/access_graph_compact.json ai_context/access_index.json
+```
+
+---
 
 ## Requirements
 
-- Windows (COM/win32 required)
-- Microsoft Access installed
-- Python 3.9+
-- `pywin32`
+- Python 3.11+
+- Microsoft Access must be installed (extraction uses COM automation)
+- Zero required dependencies for the SDK (stdlib only)
 
-```bash
-pip install pywin32
-```
+---
 
-## Usage
+## License
 
-```bash
-# Run the UI
-python main.py
-
-# Or run the summarizer directly against an existing compiled JSON
-python tools/summarize.py path/to/access_compiled.json
-```
-
-## Edge Types
-
-| Edge | Meaning |
-|---|---|
-| `CONTAINS` | Form → Control |
-| `EMBEDS_SUBFORM` | Control → Child Form |
-| `EVENT_TRIGGERS` | Event → VBA Procedure or Macro |
-| `EVENT_OPENS_FORM` | Procedure → Form/Report opened via DoCmd |
-| `EVENT_RUNS_QUERY` | Procedure → Query executed via DoCmd |
-| `EVENT_MODIFIES` | Procedure → Control property changed |
-| `CALLS` | Procedure → Procedure |
-| `DEPENDS_ON` | Table → Table (relationship) |
-| `REFERENCES` | Control → Field/Query (control source) |
-
-## Use Cases
-
-- **AI-assisted migration** — feed the summary + index to an LLM to reason about the app
-- **Dead code detection** — controls with no events and no control source
-- **Impact analysis** — trace what breaks if a table field changes
-- **Automatic documentation** — generate human-readable app descriptions
-- **Graph database import** — nodes/edges map directly to Neo4j or similar
-
-## AI Usage
-
-The summarizer produces three files designed to be attached to an AI assistant (e.g. a Claude project). Each serves a distinct purpose:
-
-**`access_summary.md`**
-> "Use this file to orient yourself on the application. It contains the data model, form hierarchy, navigation flows, key logic hubs, and dead controls. Read this first before answering any question."
-
-**`access_index.json`**
-> "Use this file to answer questions about specific forms. For any form name, look up its events, controls, subforms, and field bindings here."
-
-**`access_graph_compact.json`**
-> "Use this file only when tracing cross-form dependencies — which procedures call which, which events open which forms. Do not load this whole file; query it for specific nodes."
-
-**Recommended context budget:**
-- Most questions: summary + index (~30k tokens)
-- Dependency tracing: add compact graph (~50k tokens additional)
-- Full load: ~80k tokens, fits comfortably in a 200k context window
+MIT
