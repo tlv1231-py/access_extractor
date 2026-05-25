@@ -51,12 +51,8 @@ _VBA_BUILTINS: frozenset[str] = frozenset({
 # Entry point
 # ---------------------------------------------------------------------------
 
-def main() -> None:
-    if len(sys.argv) < 2:
-        print("Usage: python summarize.py <access_compiled.json>")
-        sys.exit(1)
-
-    input_path = pathlib.Path(sys.argv[1])
+def run_summarize(input_path: pathlib.Path) -> dict[str, pathlib.Path]:
+    """Write the three summary files and return their paths."""
     data = json.loads(input_path.read_text(encoding="utf-8"))
     out_dir = input_path.parent
 
@@ -93,10 +89,25 @@ def main() -> None:
         encoding="utf-8",
     )
 
+    return {"summary_md": md_path, "compact_json": compact_path, "index_json": index_path}
+
+
+def main() -> None:
+    if len(sys.argv) < 2:
+        print("Usage: python summarize.py <access_compiled.json>")
+        sys.exit(1)
+
+    input_path = pathlib.Path(sys.argv[1])
+    paths = run_summarize(input_path)
+
+    data = json.loads(input_path.read_text(encoding="utf-8"))
+    nodes_by_kind: dict[str, list[dict]] = defaultdict(list)
+    for n in data["nodes"]:
+        nodes_by_kind[n["kind"]].append(n)
+
     print(f"Input:   {input_path}  ({input_path.stat().st_size:>10,} bytes)")
-    print(f"Summary: {md_path}  ({md_path.stat().st_size:>10,} bytes)")
-    print(f"Compact: {compact_path}  ({compact_path.stat().st_size:>10,} bytes)")
-    print(f"Index:   {index_path}  ({index_path.stat().st_size:>10,} bytes)")
+    for label, path in (("Summary", paths["summary_md"]), ("Compact", paths["compact_json"]), ("Index", paths["index_json"])):
+        print(f"{label:<8} {path}  ({path.stat().st_size:>10,} bytes)")
     print()
     print(f"Forms: {len(nodes_by_kind['Form'])}  "
           f"Tables: {len(nodes_by_kind['Table'])}  "
@@ -105,7 +116,7 @@ def main() -> None:
     print(f"Controls: {len(nodes_by_kind['Control'])}  "
           f"Events: {len(nodes_by_kind['Event'])}  "
           f"Procedures: {len(nodes_by_kind['Procedure'])}")
-    print(f"Total nodes: {len(nodes)}  Total edges: {len(edges)}")
+    print(f"Total nodes: {len(data['nodes'])}  Total edges: {len(data['edges'])}")
 
 
 # ---------------------------------------------------------------------------

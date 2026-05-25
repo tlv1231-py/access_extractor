@@ -4,6 +4,7 @@ import pathlib
 from dataclasses import dataclass
 
 from extractor.engine.session import AccessSession
+from tools.summarize import run_summarize
 from extractor.extractors.controls import ControlExtractor
 from extractor.extractors.events import analyze_procedure_source, resolve_event_bindings
 from extractor.extractors.modules import ModuleExtractor
@@ -81,7 +82,16 @@ def run_extraction(job) -> dict:
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(builder.to_dict(), indent=2), encoding="utf-8")
 
-    return _summary(builder)
+    summary = _summary(builder)
+    try:
+        paths = run_summarize(output)
+        summary["summary_md"]   = str(paths["summary_md"])
+        summary["compact_json"] = str(paths["compact_json"])
+        summary["index_json"]   = str(paths["index_json"])
+    except Exception as exc:
+        logging.warning("Summarizer failed: %s", exc)
+
+    return summary
 
 
 # ------------------------------------------------------------------
