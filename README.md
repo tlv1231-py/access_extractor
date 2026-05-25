@@ -136,6 +136,53 @@ context-sdk merge org/repo ai_context/access_graph_compact.json ai_context/acces
 
 ---
 
+## Using with Claude (AI Context Setup)
+
+After pushing exports to a private GitHub repo, you can configure Claude to use them as live database context.
+
+### Claude Project Instructions Template
+
+Add the following to your Claude Project instructions, customized for your repo:
+
+~~~
+## Database Context
+
+You have access to live exports from a Microsoft Access database.
+Always use these exports as the authoritative source for schema, forms, queries, and VBA.
+Never guess at table names, field names, or form structure — read from the exports.
+
+### Repository
+Repository: your-org/your-exports-repo
+Files under ai_context/:
+- access_graph_compact.json — primary reference for tables, forms, procedures
+- access_index.json — per-form events, controls, subforms, bound fields
+- access_summary.md — counts and overview
+- <dbname>.json — full compiled graph (deep analysis only)
+
+### Loading Rules
+- Default to access_graph_compact.json for schema and structure questions
+- Use access_index.json for form behavior and event questions
+- Never load all files at once unless explicitly asked
+- Only load the full compiled JSON when compact and index files are insufficient
+- When a file is loaded, confirm which file was used
+
+### Behavior
+- Treat exports as ground truth
+- Validate all table and field names against exports before writing VBA or queries
+- When exports appear outdated, flag it and suggest running a fresh extraction
+~~~
+
+### Multiple Databases
+If you have separate frontend and backend databases, create separate private repos
+for each and reference both in your Claude Project instructions with clear labels.
+
+### Token Efficiency Tips
+- The compact graph is 80-90% smaller than the full compiled JSON
+- Use get_context_slice() in the SDK to further reduce tokens per query
+- SHA-pin your ref in production for deterministic, cached context loads
+
+---
+
 ## Requirements
 
 - Python 3.11+
