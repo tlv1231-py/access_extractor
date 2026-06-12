@@ -1,9 +1,17 @@
 import pathlib
 import threading
 import tkinter as tk
+import webbrowser
 from tkinter import filedialog, messagebox, scrolledtext
 
 from extractor.engine.runner import ExtractionJob, run_extraction
+
+VISUALIZER_URL = (
+    "https://tlv1231-py.github.io/access_extractor/tools/visualizer/index.html"
+    "?title=Greenleaf"
+    "&fe=tlv1231-py/greenleaf-private"
+    "&be=tlv1231-py/greenleaf-private-backend"
+)
 from publisher.profiles import save_profile, load_profile, delete_profile, list_profiles
 
 
@@ -71,18 +79,25 @@ class App(tk.Frame):
         self._run_btn = tk.Button(self, text="Run", command=self._run, width=12)
         self._run_btn.grid(row=9, column=0, columnspan=3, pady=8)
 
+        # Visualizer button
+        tk.Button(
+            self,
+            text="🌐 Open Visualizer",
+            command=lambda: webbrowser.open(VISUALIZER_URL),
+        ).grid(row=10, column=0, columnspan=3, pady=4)
+
         # Status
         self._status_var = tk.StringVar(value="idle")
         tk.Label(self, textvariable=self._status_var, anchor="w").grid(
-            row=10, column=0, columnspan=3, sticky="w", **pad
+            row=11, column=0, columnspan=3, sticky="w", **pad
         )
 
         # Log
         self._log = scrolledtext.ScrolledText(self, height=16, state="disabled", wrap="word")
-        self._log.grid(row=11, column=0, columnspan=3, sticky="nsew", **pad)
+        self._log.grid(row=12, column=0, columnspan=3, sticky="nsew", **pad)
 
         self.columnconfigure(1, weight=1)
-        self.rowconfigure(11, weight=1)
+        self.rowconfigure(12, weight=1)
 
     # ------------------------------------------------------------------
     # Profile management

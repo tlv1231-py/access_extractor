@@ -79,6 +79,8 @@ body {
 .btn[data-kind="Procedure"] { --kc: var(--c-proc); }
 .btn[data-kind="Macro"]     { --kc: var(--c-macro); }
 .btn[data-kind="Query"]     { --kc: var(--c-query); }
+.btn[data-kind="Event"]  { --kc: #FF4AE8; }
+.btn[data-kind="Report"] { --kc: #4AFFD4; }
 
 .btn.impact-btn.active { background: var(--c-impact); border-color: var(--c-impact); color: #fff; }
 .btn.orphan-btn.active { background: var(--c-orphan); border-color: var(--c-orphan); color: #fff; }
@@ -236,6 +238,8 @@ body {
   <button class="btn kind-btn active" data-kind="Procedure">Procedure</button>
   <button class="btn kind-btn active" data-kind="Macro">Macro</button>
   <button class="btn kind-btn active" data-kind="Query">Query</button>
+  <button class="btn kind-btn active" data-kind="Event">Event</button>
+  <button class="btn kind-btn active" data-kind="Report">Report</button>
   <div class="sep"></div>
   <button class="btn active" id="toggle-fe">FE</button>
   <button class="btn active" id="toggle-be">BE</button>
@@ -247,6 +251,8 @@ body {
   <button class="btn orphan-btn" id="btn-orphans">☠ Orphans</button>
   <button class="btn febe-btn" id="btn-febe">FE↔BE</button>
   <button class="btn" id="btn-subform-tree">Subform Tree</button>
+  <div class="sep"></div>
+  <button class="btn" id="btn-full-graph" disabled>⟳ Loading queries…</button>
 </div>
 
 <!-- CANVAS -->
@@ -333,6 +339,7 @@ document.getElementById('app-title').textContent = CFG.title;
 const NODE_COLOR = {
   Form:'#4A9EFF', Subform:'#7BC8FF', Table:'#4AFF91',
   Procedure:'#FFB84A', Macro:'#FFE74A', Query:'#B84AFF',
+  Event:'#FF4AE8', Proc:'#FFB84A', Report:'#4AFFD4',
 };
 const EDGE_COLOR = {
   EVENT_TRIGGERS:'#e8f0f8', EVENT_OPENS_FORM:'#4A9EFF',
@@ -343,7 +350,7 @@ const EDGE_W = {
   EVENT_TRIGGERS:1, EVENT_OPENS_FORM:2, EVENT_RUNS_QUERY:2,
   CALLS:1, EMBEDS_SUBFORM:3, DEPENDS_ON:1,
 };
-const NODE_R = { Form:12, Subform:10, Table:9, Procedure:10, Macro:10, Query:10 };
+const NODE_R = { Form:12, Subform:10, Table:9, Procedure:10, Macro:10, Query:10, Event:8, Proc:10, Report:11 };
 
 // ═══════════════════════════════════════════
 // STATE
@@ -351,10 +358,11 @@ const NODE_R = { Form:12, Subform:10, Table:9, Procedure:10, Macro:10, Query:10 
 let allNodes = [], allEdges = [], feIndex = {};
 let selectedNode = null;
 let impactMode = false, orphanMode = false, febeMode = false, selEdgesMode = false;
-let visibleKinds = new Set(['Form','Subform','Table','Procedure','Macro','Query']);
+let visibleKinds = new Set(['Form','Subform','Table','Procedure','Macro','Query','Event','Proc','Report']);
 let showFE = true, showBE = true, showBoth = true;
 let searchTerm = '';
 let simulation, svg, g, linkLayer, nodeLayer;
+let fullGraphLoaded = false;
 
 // ═══════════════════════════════════════════
 // FETCH
@@ -402,6 +410,7 @@ async function loadAll() {
     await new Promise(r => setTimeout(r, 40));
     initGraph();
     document.getElementById('loading').style.display = 'none';
+    loadFullGraph(); // background load, no await
   } catch(e) {
     showError('Unexpected error: ' + e.message);
   }
@@ -897,6 +906,51 @@ document.getElementById('btn-subform-tree').addEventListener('click',()=>{
 document.getElementById('overlay-close').addEventListener('click',()=>
   document.getElementById('subform-overlay').classList.remove('open'));
 document.getElementById('panel-close').addEventListener('click', deselectAll);
+
+async function loadFullGraph() {
+  if (fullGraphLoaded) return;
+  const btn = document.getElementById('btn-full-graph');
+  btn.textContent = '⟳ Loading…';
+  btn.disabled = true;
+
+  try {
+    const feRepo = CFG.feRepo;
+    const metaRes = await fetch(
+      `https://api.github.com/repos/${feRepo}/contents/ai_context/full_graph.json`
+    );
+    if (!metaRes.ok) throw new Error('Metadata fetch failed: ' + metaRes.status);
+    const meta = await metaRes.json();
+    if (!meta.download_url) throw new Error('No download_url in response');
+
+    const dataRes = await fetch(meta.download_url);
+    if (!dataRes.ok) throw new Error('Download failed: ' + dataRes.status);
+    const full = await dataRes.json();
+
+    const existing = new Set(allNodes.map(n => n.id));
+    (full.nodes||[]).forEach(n => {
+      if (!existing.has(n.id)) allNodes.push({ ...n, src: 'fe' });
+    });
+
+    const existingEdges = new Set(allEdges.map(e => e.eid));
+    (full.edges||[]).forEach(e => {
+      const eid = `${e.src}|${e.dst}|${e.kind}`;
+      if (!existingEdges.has(eid)) allEdges.push({ ...e, eid });
+    });
+
+    fullGraphLoaded = true;
+    const qCount = allNodes.filter(n => n.kind === 'Query').length;
+    btn.textContent = `✓ ${qCount} queries loaded`;
+    btn.classList.add('active');
+    updateStats();
+    buildGraph();
+  } catch(e) {
+    btn.textContent = '✕ Failed';
+    btn.disabled = false;
+    console.error('Full graph load error:', e);
+  }
+}
+
+document.getElementById('btn-full-graph').addEventListener('click', loadFullGraph);
 
 // ═══════════════════════════════════════════
 // BOOT
