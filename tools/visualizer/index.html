@@ -472,7 +472,11 @@ function initGraph() {
   nodeLayer = g.append('g');
 
   const zoom = d3.zoom().scaleExtent([0.04,6])
-    .on('zoom', e => g.attr('transform', e.transform));
+    .on('zoom', e => {
+      g.attr('transform', e.transform);
+      const showLabels = e.transform.k > 1.5;
+      if (g._ng) g._ng.select('text').attr('opacity', showLabels ? 1 : 0);
+    });
   svg.call(zoom);
   svg.on('click', e => { if (e.target === el || e.target.tagName === 'svg') deselectAll(); });
 
@@ -505,11 +509,12 @@ function buildGraph() {
   const W = el.clientWidth, H = el.clientHeight;
 
   simulation = d3.forceSimulation(nodes)
-    .force('link',      d3.forceLink(edges).id((_,i)=>i).distance(90).strength(0.4))
-    .force('charge',    d3.forceManyBody().strength(-320))
+    .force('link',      d3.forceLink(edges).id((_,i)=>i).distance(60).strength(0.2))
+    .force('charge',    d3.forceManyBody().strength(-80).distanceMax(300))
     .force('center',    d3.forceCenter(W/2, H/2))
-    .force('collision', d3.forceCollide().radius(24))
-    .alphaDecay(0.02);
+    .force('collision', d3.forceCollide().radius(14))
+    .alphaDecay(0.03)
+    .velocityDecay(0.6);
 
   // Links
   const links = linkLayer.selectAll('line').data(edges).join('line')
@@ -555,6 +560,7 @@ function buildGraph() {
     .attr('fill','#c8d4e0').attr('font-size','9px')
     .attr('pointer-events','none')
     .attr('font-family','JetBrains Mono, monospace')
+    .attr('opacity', 0)
     .text(d => d.name.length>20 ? d.name.slice(0,18)+'…' : d.name);
 
   simulation.on('tick', () => {
