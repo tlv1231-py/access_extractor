@@ -107,6 +107,11 @@ def _process_form(
 
     try:
         access.DoCmd.OpenForm(form_name, _AC_DESIGN)
+    except Exception as exc:
+        logging.warning("Skipping form %r (failed to open in design mode): %s", form_name, exc)
+        return
+
+    try:
         form = access.Forms(form_name)
 
         try:
@@ -126,9 +131,13 @@ def _process_form(
             if node.properties.get("events"):
                 builder.add(*resolve_event_bindings(node, builder))
 
-        access.DoCmd.Close(_AC_FORM, form_name)
     except Exception as exc:
-        logging.warning("Skipping form %r: %s", form_name, exc)
+        logging.warning("Error processing form %r: %s", form_name, exc)
+    finally:
+        try:
+            access.DoCmd.Close(_AC_FORM, form_name)
+        except Exception:
+            pass
 
 
 def _materialize_proc_nodes(builder: GraphBuilder) -> None:
